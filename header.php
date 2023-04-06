@@ -21,6 +21,9 @@
 
 	<?php wp_head(); ?>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="all" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body <?php body_class(); ?>>
@@ -28,19 +31,13 @@
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'soundandstage'); ?></a>
 
-		<header id="masthead" class="site-header flex flex-row items-center justify-between w-full space-x-5">
+		<header id="masthead" class="site-header flex flex-row items-center justify-between w-full space-x-5 h-32 px-16">
 			<div class="site-branding min-w-fit">
 				<?php
 				the_custom_logo();
-				if (is_front_page() && is_home()) :
 				?>
-					<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+				<h1 class="site-title"><a class="text-xl font-bold uppercase" href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
 				<?php
-				else :
-				?>
-					<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-				<?php
-				endif;
 				$soundandstage_description = get_bloginfo('description', 'display');
 				if ($soundandstage_description || is_customize_preview()) :
 				?>
@@ -50,6 +47,7 @@
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation flex flex-row w-full items-center">
+				<!-- toggle sidebar button -->
 				<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e('Primary Menu', 'soundandstage'); ?></button> -->
 				<?php
 				wp_nav_menu(

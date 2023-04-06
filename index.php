@@ -29,7 +29,7 @@ get_header();
 			endif;
 
 			/* Start the Loop */
-			while ( have_posts() ) :
+			while ( have_posts() && ! is_home() ) :
 				the_post();
 
 				/*

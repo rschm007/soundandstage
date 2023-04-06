@@ -1,0 +1,31 @@
+@import "./nav/nav.css";
+
+body {
+    background-color: #000000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.25px;
+}
+
+a {
+    color: white !important;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: -0.25px;
+}
+
+/* header styles */
+.site-header .main-navigation .menu-item a {
+    transition: all 0.2s ease-in-out;
+}
+
+.site-header .main-navigation .menu-item a:hover {
+    color: #e4c28b !important;
+}

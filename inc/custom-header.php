@@ -23,7 +23,7 @@ function soundandstage_custom_header_setup() {
 			'soundandstage_custom_header_args',
 			array(
 				'default-image'      => '',
-				'default-text-color' => '000000',
+				'default-text-color' => 'ffffff',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
