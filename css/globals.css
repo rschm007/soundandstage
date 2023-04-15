@@ -1,7 +1,7 @@
 @import "./nav/nav.css";
 
 body {
-    background-color: #000000;
+    background-color: #262626;
 }
 
 h1,
@@ -17,15 +17,41 @@ h6 {
 
 a {
     color: white !important;
-    font-family: 'Montserrat', sans-serif;
     letter-spacing: -0.25px;
 }
 
+a,
+span,
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
 /* header styles */
+.site-header .main-navigation .nav-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
 .site-header .main-navigation .menu-item a {
+    position: relative;
     transition: all 0.2s ease-in-out;
+    margin: 0 0.5rem;
+}
+
+.site-header .main-navigation .current-menu-item a::before {
+    content: "";
+    position: absolute;
+    margin-top: 1.4rem;
+    background-color: #e4c28b;
+    height: 3px;
+    width: 100%;
 }
 
 .site-header .main-navigation .menu-item a:hover {
     color: #e4c28b !important;
+}
+
+.site-header .main-navigation {
+    justify-content: end;
 }
