@@ -14,7 +14,7 @@ if (!is_active_sidebar('sidebar-1')) {
 ?>
 
 <!-- WIP -->
-<aside id="secondary" class="widget-area flex md:hidden">
+<aside id="secondary" class="flex flex-col w-full h-full md:hidden">
 	<?php dynamic_sidebar('sidebar-1'); ?>
 </aside>
 <!-- #secondary -->

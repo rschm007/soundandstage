@@ -32,7 +32,7 @@
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'soundandstage'); ?></a>
 
-		<header id="masthead" class="site-header flex flex-row items-center justify-between w-full space-x-5 h-32 px-16">
+		<header id="masthead" class="relative site-header flex flex-row items-center justify-between w-full space-x-5 h-32 px-16">
 			<div class="site-branding min-w-fit">
 
 				<?php
@@ -56,7 +56,7 @@
 
 			<nav id="site-navigation" class="main-navigation flex flex-row w-full items-center">
 				<!-- toggle sidebar button -->
-				<button class="menu-toggle sm:block md:hidden" aria-controls="primary-menu" aria-expanded="false">
+				<button id="menu-toggle" class="menu-toggle sm:block md:hidden" aria-controls="primary-menu" aria-expanded="false">
 					<i class="fa-solid fa-bars text-white text-4xl"></i>
 				</button>
 

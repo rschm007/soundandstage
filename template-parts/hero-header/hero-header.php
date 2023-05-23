@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying a full-width hero banner with background image and header captions
  *
@@ -26,18 +27,19 @@
         <header id="hero" class="h-[85vh] relative object-cover flex flex-col items-center justify-center" style="background-image: url(<?php echo esc_url($image['url']); ?>)" alt="<?php echo esc_attr($image['alt']); ?>">
 
             <div class="flex flex-col items-center justify-center w-10/12 h-2/3">
-                <div class="absolute w-10/12 h-2/3 z-0 bg-slate-800 opacity-50"></div>
 
-                <div class="flex flex-col items-center justify-center w-full h-full relative z-10 space-y-3">
-                    <h1 class="text-white text-5xl text-center uppercase font-bold">
-                        <?php echo $header ?>
-                    </h1>
+                <div class="flex flex-col items-center bg-slate-800/50 justify-center w-full h-full relative z-10 space-y-3 max-w-fit max-h-fit my-32">
+                    <div className="space-y-3" style="padding: 2rem">
+                        <h1 class="relative z-10 text-white text-5xl text-center uppercase font-bold">
+                            <?php echo $header ?>
+                        </h1>
 
-                    <?php if (!empty($sub_header)) : ?>
-                        <h2 class="text-white text-2xl text-center uppercase font-light">
-                            <?php echo $sub_header ?>
-                            </h1>
-                        <?php endif ?>
+                        <?php if (!empty($sub_header)) : ?>
+                            <h2 class="relative z-10 text-white text-2xl text-center uppercase font-light">
+                                <?php echo $sub_header ?>
+                                </h1>
+                            <?php endif ?>
+                    </div>
                 </div>
 
             </div>
