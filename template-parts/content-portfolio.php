@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template part for displaying page content in page.php
+ * Template part for displaying portfolio page content in page.php
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -23,14 +23,6 @@
 
 	<!-- .entry-content -->
 	<div class="entry-content">
-
-		<!-- portfolio page -->
-		<?php
-		if (is_page("portfolio")) :
-			get_template_part('template-parts/portfolio/portfolio-categories')
-		?>
-		<?php endif; ?>
-
 		<?php
 		the_content();
 
