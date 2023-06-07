@@ -18,9 +18,6 @@
 	?>
 	<?php endif; ?>
 
-
-	<?php soundandstage_post_thumbnail(); ?>
-
 	<!-- .entry-content -->
 	<div class="entry-content">
 

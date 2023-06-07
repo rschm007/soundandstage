@@ -32,7 +32,7 @@
 	<div id="page" class="site">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'soundandstage'); ?></a>
 
-		<header id="masthead" class="relative site-header flex flex-row items-center justify-between w-full space-x-5 h-32 px-16">
+		<header id="masthead" class="relative site-header flex flex-row items-center justify-between w-full space-x-5 h-16 px-16">
 			<div class="site-branding min-w-fit">
 
 				<?php

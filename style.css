@@ -582,19 +582,14 @@ video {
   z-index: 50;
 }
 
-.my-12 {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 
 .my-32 {
   margin-top: 8rem;
   margin-bottom: 8rem;
-}
-
-.my-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
 }
 
 .mb-1 {
@@ -609,20 +604,8 @@ video {
   margin-top: 1rem;
 }
 
-.mt-32 {
-  margin-top: 8rem;
-}
-
-.mt-16 {
-  margin-top: 4rem;
-}
-
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mb-12 {
-  margin-bottom: 3rem;
 }
 
 .block {
@@ -649,16 +632,20 @@ video {
   display: none;
 }
 
+.h-16 {
+  height: 4rem;
+}
+
 .h-2\/3 {
   height: 66.666667%;
 }
 
-.h-32 {
-  height: 8rem;
-}
-
 .h-56 {
   height: 14rem;
+}
+
+.h-72 {
+  height: 18rem;
 }
 
 .h-\[85vh\] {
@@ -667,18 +654,6 @@ video {
 
 .h-full {
   height: 100%;
-}
-
-.h-40 {
-  height: 10rem;
-}
-
-.h-64 {
-  height: 16rem;
-}
-
-.h-72 {
-  height: 18rem;
 }
 
 .max-h-fit {
@@ -690,24 +665,12 @@ video {
   width: 83.333333%;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.w-32 {
-  width: 8rem;
-}
-
-.w-56 {
-  width: 14rem;
-}
-
-.w-64 {
-  width: 16rem;
-}
-
 .w-72 {
   width: 18rem;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .min-w-fit {
@@ -786,12 +749,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
-
-.space-y-5 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
 .rounded {
@@ -961,14 +918,6 @@ video {
     grid-column: span 1 / span 1;
   }
 
-  .md\:mt-0 {
-    margin-top: 0px;
-  }
-
-  .md\:-mt-0 {
-    margin-top: -0px;
-  }
-
   .md\:-mt-12 {
     margin-top: -3rem;
   }
@@ -989,10 +938,6 @@ video {
     height: 66.666667%;
   }
 
-  .md\:h-1\/3 {
-    height: 33.333333%;
-  }
-
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -1000,10 +945,6 @@ video {
   .md\:gap-x-5 {
     -moz-column-gap: 1.25rem;
          column-gap: 1.25rem;
-  }
-
-  .md\:gap-y-0 {
-    row-gap: 0px;
   }
 
   .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {

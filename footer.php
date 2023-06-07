@@ -12,10 +12,10 @@
 
 ?>
 
-<footer id="colophon" class="site-footer flex flex-row items-center justify-between sm:h-80 lg:h-32 bg-black px-16">
+<footer id="colophon" class="hidden site-footer flex-row items-center justify-between sm:h-80 lg:h-32 bg-black px-16">
 	<div class="flex flex-col items-start justify-start mt-4">
 		<p class="text-white text-xs font-semibold mb-1">
-			©Vinnie Olivieri
+			©Vincent Olivieri
 		</p>
 
 		<div class="flex flex-row items-center">
@@ -35,10 +35,6 @@
 		<div class="flex flex-row items-center space-x-2">
 			<a href="https://www.facebook.com/vrojr" target="_blank">
 				<i class="fa-brands fa-square-facebook text-white text-sm"></i>
-			</a>
-
-			<a href="https://twitter.com/vinnieolivieri" target="_blank">
-				<i class="fa-brands fa-square-twitter text-white text-sm"></i>
 			</a>
 		</div>
 
