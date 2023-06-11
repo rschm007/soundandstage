@@ -13,7 +13,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<!-- .entry-header -->
 	<?php
-	$hero = get_field('hero_header');
+	$hero = get_field('hero-header');
 	if ($hero) : get_template_part('template-parts/hero-header/hero-header')
 	?>
 	<?php endif; ?>

@@ -14,10 +14,17 @@
 
 	<div class="entry-content">
 		<?php
-		$hero = get_field('hero_header');
-		if ($hero) :
+		$hero = get_field('hero-header');
+		if ($hero) : get_template_part('template-parts/hero-header/hero-header')
 		?>
-			<div>hi</div>
+		<?php endif; ?>
+
+		<!-- posts - composition -->
+		<?php
+		$composition_group_key = "group_646ffad4410cb";
+		$composition = acf_get_fields($composition_group_key);
+		if ($composition) : get_template_part('template-parts/portfolio/portfolio-posts-composition')
+		?>
 		<?php endif; ?>
 
 		<?php
