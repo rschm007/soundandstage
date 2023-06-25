@@ -24,14 +24,12 @@
 		?>
 		<?php endif; ?>
 
-		<!-- portfolio page -->
 		<?php
 		if (is_page("portfolio")) :
 			get_template_part('template-parts/portfolio/portfolio-categories')
 		?>
 		<?php endif; ?>
 
-		<!-- about page -->
 		<?php
 		if (is_page("about")) :
 			get_template_part('template-parts/about/content-about')
@@ -48,6 +46,7 @@
 			)
 		);
 		?>
+		
 	</div>
 
 </article><!-- #post-<?php the_ID(); ?> -->

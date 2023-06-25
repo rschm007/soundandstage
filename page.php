@@ -34,10 +34,6 @@ get_header();
 				<a href="<?php the_permalink(); ?>" class="relative flex flex-col items-center justify-center md:col-span-1 h-96 w-96 z-10 group">
 					<img class="object-cover bg-cover bg-center w-full h-full group-hover:opacity-40 opacity-100 transition-all duration-150" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
 
-					<!-- <h4 class="absolute text-2xl md:text-3xl font-normal -md:-mt-12 bg-slate-800/80 w-full px-8 py-4 z-50 text-center">
-						<?php the_title(); ?>
-					</h4> -->
-
 					<h4 class="text-2xl font-light -md:-mt-12 bg-slate-900/90 w-full px-8 py-4 z-50 text-center">
 						<?php the_title(); ?>
 					</h4>
