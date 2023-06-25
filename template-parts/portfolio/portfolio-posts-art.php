@@ -1,15 +1,15 @@
 <?php
-$composition_group_key = "group_646ffad4410cb";
-$fields = acf_get_fields($composition_group_key); // Update fields in this post
+$art_group_key = "group_648940b7c8170";
+$fields = acf_get_fields($art_group_key); // Update fields in this post
 if ($fields) :
     $_fields = get_fields();
 
-    $client = $_fields['composition_client_name'];
-    $director = $_fields['composition_director_attribution'];
-    $content = $_fields['composition_text_content'];
+    $client = $_fields['art_client_name'];
+    $director = $_fields['art_director_attribution'];
+    $content = $_fields['art_text_content'];
 
 ?>
-    <div id="portfolio-posts-composition" class="flex flex-col items-center justify-center py-12">
+    <div id="portfolio-posts-art" class="flex flex-col items-center justify-center py-12">
         <div class="flex flex-col items-center justify-center space-y-8 px-20 md:px-36">
             <h3 class="text-white text-4xl font-bold">
                 <?php echo the_title(); ?>
@@ -38,19 +38,19 @@ if ($fields) :
             <div class="flex flex-col text-left text-white items-center justify-center my-12">
                 <?php echo $content; ?>
 
-                <?php if (have_rows('soundcloud_embeds')) : ?>
-                    <?php while (have_rows('soundcloud_embeds')) : the_row();
+                <?php if (have_rows('embeds')) : ?>
+                    <?php while (have_rows('embeds')) : the_row();
 
-                        $one = get_sub_field('soundcloud_embed_one');
-                        $caption_one = get_sub_field('soundcloud_embed_one_caption');
-                        $two = get_sub_field('soundcloud_embed_two');
-                        $caption_two = get_sub_field('soundcloud_embed_two_caption');
-                        $three = get_sub_field('soundcloud_embed_three');
-                        $caption_three = get_sub_field('soundcloud_embed_three_caption');
-                        $four = get_sub_field('soundcloud_embed_four');
-                        $caption_four = get_sub_field('soundcloud_embed_four_caption');
-                        $five = get_sub_field('soundcloud_embed_five');
-                        $caption_five = get_sub_field('soundcloud_embed_five_caption');
+                        $one = get_sub_field('embed_one');
+                        $caption_one = get_sub_field('embed_one_caption');
+                        $two = get_sub_field('embed_two');
+                        $caption_two = get_sub_field('embed_two_caption');
+                        $three = get_sub_field('embed_three');
+                        $caption_three = get_sub_field('embed_three_caption');
+                        $four = get_sub_field('embed_four');
+                        $caption_four = get_sub_field('embed_four_caption');
+                        $five = get_sub_field('embed_five');
+                        $caption_five = get_sub_field('embed_five_caption');
 
                     ?>
                         <?php if ($one) :

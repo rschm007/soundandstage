@@ -10,6 +10,8 @@
 
 ?>
 
+<?php $post = get_post_type(); ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="entry-content">
@@ -19,11 +21,27 @@
 		?>
 		<?php endif; ?>
 
+
 		<!-- posts - composition -->
 		<?php
-		$composition_group_key = "group_646ffad4410cb";
-		$composition = acf_get_fields($composition_group_key);
+		$composition = str_contains($post, "composition");
 		if ($composition) : get_template_part('template-parts/portfolio/portfolio-posts-composition')
+		?>
+		<?php endif; ?>
+
+
+		<!-- posts - design -->
+		<?php
+		$design = str_contains($post, "design");
+		if ($design) : get_template_part('template-parts/portfolio/portfolio-posts-design')
+		?>
+		<?php endif; ?>
+
+
+		<!-- posts - art -->
+		<?php
+		$art = str_contains($post, "art");
+		if ($art) : get_template_part('template-parts/portfolio/portfolio-posts-art')
 		?>
 		<?php endif; ?>
 

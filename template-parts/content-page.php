@@ -10,21 +10,31 @@
 
 ?>
 
+<?php $post = get_post_type(); ?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<!-- .entry-header -->
-	<?php
-	$hero = get_field('hero-header');
-	if ($hero) : get_template_part('template-parts/hero-header/hero-header')
-	?>
-	<?php endif; ?>
 
 	<!-- .entry-content -->
 	<div class="entry-content">
+
+		<!-- .entry-header -->
+		<?php
+		$hero = get_field('hero_header');
+		if ($hero) : get_template_part('template-parts/hero-header/hero-header')
+		?>
+		<?php endif; ?>
 
 		<!-- portfolio page -->
 		<?php
 		if (is_page("portfolio")) :
 			get_template_part('template-parts/portfolio/portfolio-categories')
+		?>
+		<?php endif; ?>
+
+		<!-- about page -->
+		<?php
+		if (is_page("about")) :
+			get_template_part('template-parts/about/content-about')
 		?>
 		<?php endif; ?>
 

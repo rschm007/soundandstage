@@ -1,15 +1,15 @@
 <?php
-$composition_group_key = "group_646ffad4410cb";
-$fields = acf_get_fields($composition_group_key); // Update fields in this post
+$design_group_key = "group_6489374db651e";
+$fields = acf_get_fields($design_group_key); // Update fields in this post
 if ($fields) :
     $_fields = get_fields();
 
-    $client = $_fields['composition_client_name'];
-    $director = $_fields['composition_director_attribution'];
-    $content = $_fields['composition_text_content'];
+    $client = $_fields['design_client_name'];
+    $director = $_fields['design_director_attribution'];
+    $content = $_fields['design_text_content'];
 
 ?>
-    <div id="portfolio-posts-composition" class="flex flex-col items-center justify-center py-12">
+    <div id="portfolio-posts-design" class="flex flex-col items-center justify-center py-12">
         <div class="flex flex-col items-center justify-center space-y-8 px-20 md:px-36">
             <h3 class="text-white text-4xl font-bold">
                 <?php echo the_title(); ?>
