@@ -19,6 +19,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
 	<?php wp_head(); ?>
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" type="text/css" media="all" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,8 +56,16 @@
 
 			</div><!-- .site-branding -->
 
-			<nav id="site-navigation" class="main-navigation flex flex-row w-full items-center">
+			<nav id="site-navigation" class="main-navigation relative flex flex-row w-full items-center">
 				<!-- toggle sidebar button -->
+				<script>
+					$(function() {
+						$("#menu-toggle").click(function() {
+							$("#mobile-menu").removeClass("hidden");
+						})
+					})
+				</script>
+
 				<button id="menu-toggle" class="menu-toggle sm:block md:hidden" aria-controls="primary-menu" aria-expanded="false">
 					<i class="fa-solid fa-bars text-white text-4xl"></i>
 				</button>
@@ -69,6 +79,35 @@
 						)
 					);
 					?>
+				</div>
+
+				<!-- mobile menu -->
+				<div id="mobile-menu" class="hidden w-screen h-screen fixed top-0 left-0 z-[100]">
+					<div class="w-full h-full flex flex-col items-center justify-center bg-slate-900">
+
+						<!-- toggle sidebar button -->
+						<script>
+							$(function() {
+								$("#menu-close-toggle").click(function() {
+									$("#mobile-menu").addClass("hidden");
+								})
+							})
+						</script>
+
+						<button id="menu-close-toggle" class="menu-toggle fixed" style="top: 4rem; right: 3rem;">
+							<p class="text-white text-[4rem] font-bold">X</p>
+						</button>
+
+						<?php
+						wp_nav_menu(
+							array(
+								'theme_location' => 'menu-1',
+								'menu_id'        => 'primary-menu',
+							)
+						);
+						?>
+					</div>
+
 				</div>
 			</nav><!-- #site-navigation -->
 		</header><!-- #masthead -->
