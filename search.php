@@ -15,16 +15,20 @@ get_header();
 
 	<?php if (have_posts()) : ?>
 
-		<header class="page-header">
-			<h1 class="page-title">
-				<?php
-				/* translators: %s: search query. */
-				printf(esc_html__('Search Results for: %s', 'soundandstage'), '<span>' . get_search_query() . '</span>');
-				?>
-			</h1>
+		<header class="flex flex-col items-center justify-center page-header mt-8">
+			<h2 class="text-3xl text-center w-full h-full capitalize">
+				Search Results for:
+			</h2>
+
+			<?php
+			/* translators: %s: search query. */
+			printf(esc_html__('Search Results for: %s', 'soundandstage'), '<h3 class="text-5xl text-center w-full h-full capitalize font-bold">' . get_search_query() . '</h3>');
+			?>
+
 		</header><!-- .page-header -->
 
-	<?php
+		<div class="w-full h-full flex flex-row items-center justify-center flex-wrap gap-8 my-16">
+		<?php
 		/* Start the Loop */
 		while (have_posts()) :
 			the_post();
@@ -45,7 +49,8 @@ get_header();
 		get_template_part('template-parts/content', 'none');
 
 	endif;
-	?>
+		?>
+		</div>
 
 </main><!-- #main -->
 

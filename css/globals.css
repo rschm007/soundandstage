@@ -1,4 +1,5 @@
 @import "./nav/nav.css";
+@import "./search/search.css";
 
 body {
     background-color: #262626;

@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying results in search pages
  *
@@ -9,27 +10,20 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+<div class="search-result">
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			soundandstage_posted_on();
-			soundandstage_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+	<a class="relative flex flex-col items-center justify-center md:col-span-1 z-10 group" href="<?php the_permalink(); ?>">
 
-	<?php soundandstage_post_thumbnail(); ?>
+		<div class="relative flex flex-col items-center justify-center md:col-span-1 h-96 w-96 z-10 group">
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+			<?php echo soundandstage_post_thumbnail(); ?>
 
-	<footer class="entry-footer">
-		<?php soundandstage_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+			<h4 class="text-2xl font-light -md:-mt-12 bg-slate-900/90 w-full px-8 py-4 z-50 text-center">
+				<?php the_title(); ?>
+			</h4>
+
+		</div>
+
+	</a>
+	
+</div>
