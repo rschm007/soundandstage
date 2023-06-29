@@ -72,13 +72,21 @@
     margin-top: 2.5rem;
 }
 
-@media screen and (min-width: 768px) {
-    .site-header .main-navigation .current-menu-ancestor>a::before {
+@media only screen and (max-width: 768px) {
+    /* .site-header .main-navigation .current-menu-ancestor>a::before {
         content: "";
         position: absolute;
         margin-top: 1.4rem;
         background-color: #e4c28b;
         height: 3px;
         width: 100%;
+    } */
+
+    .site-header .main-navigation .sub-menu {
+        margin: 0.5rem 0;
+    }
+
+    .site-header .main-navigation .sub-menu>.menu-item a {
+        margin-left: 2rem;
     }
 }
