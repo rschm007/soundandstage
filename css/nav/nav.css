@@ -29,16 +29,32 @@
 }
 
 /* sub-menu navigation */
-#site-navigation .menu-menu-1-container .nav-menu .menu-item-has-children {
+.site-header .main-navigation #primary-menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-header .main-navigation #primary-menu .sub-menu {
+    position: absolute;
+    opacity: 0;
+}
+
+.site-header .main-navigation #primary-menu .menu-item-has-children:hover .sub-menu {
+    opacity: 100;
+}
+
+.site-header .main-navigation #primary-menu .sub-menu .menu-item a {
+    text-transform: capitalize;
+}
+
+.site-header .main-navigation #primary-menu .menu-item-has-children {
     position: relative;
     z-index: 20;
 }
 
-#site-navigation .menu-menu-1-container .nav-menu .menu-item-has-children:hover .sub-menu {
-    opacity: 100;
-}
-
-#site-navigation .menu-menu-1-container .nav-menu .menu-item-has-children .sub-menu {
+.site-header .main-navigation #primary-menu .menu-item-has-children .sub-menu {
     position: absolute;
     transition: all 150ms ease-in-out;
     z-index: 200;
@@ -46,17 +62,12 @@
     background: black;
     border: 1px solid #464646;
     margin-top: 0.5rem;
-    opacity: 0;
 }
 
-#site-navigation .menu-menu-1-container .nav-menu .menu-item-has-children .sub-menu li {
+.site-header .main-navigation #primary-menu .menu-item-has-children .sub-menu li {
     border-bottom: 1px solid #464646;
     transition: all 150ms ease-in-out;
     padding: 0.25rem 0.5rem;
-}
-
-#site-navigation .menu-menu-1-container .nav-menu .menu-item-has-children .sub-menu li a {
-    text-transform: capitalize;
 }
 
 .site-header .main-navigation .current-menu-item .sub-menu li a::before {
@@ -73,15 +84,6 @@
 }
 
 @media only screen and (max-width: 768px) {
-    /* .site-header .main-navigation .current-menu-ancestor>a::before {
-        content: "";
-        position: absolute;
-        margin-top: 1.4rem;
-        background-color: #e4c28b;
-        height: 3px;
-        width: 100%;
-    } */
-
     .site-header .main-navigation .sub-menu {
         margin: 0.5rem 0;
     }

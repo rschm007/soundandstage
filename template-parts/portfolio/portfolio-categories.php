@@ -22,7 +22,7 @@
 
         ?>
 
-            <a href="<?php $link; ?>" class="relative flex flex-col items-center justify-center md:col-span-1 h-56 md:h-2/3 w-full z-10 group">
+            <a href="<?php echo $link; ?>" class="relative flex flex-col items-center justify-center md:col-span-1 h-56 md:h-2/3 w-full z-10 group">
                 <img class="object-cover bg-cover bg-center w-full h-full group-hover:opacity-40 opacity-100 transition-all duration-150" src="<?php echo esc_url($image['url']); ?>" alt="<?php esc_attr($image['alt']); ?>" />
 
                 <h4 class="absolute text-3xl md:text-4xl font-bold -md:-mt-12 bg-slate-800/70 px-8 py-4 z-50 text-center">
