@@ -212,3 +212,14 @@ function my_wp_nav_menu_items($items, $args)
 	// return
 	return $items;
 }
+
+function prefix_console_log_message($message)
+{
+
+	$message = htmlspecialchars(stripslashes($message));
+	//Replacing Quotes, so that it does not mess up the script
+	$message = str_replace('"', "-", $message);
+	$message = str_replace("'", "-", $message);
+
+	return "<script>console.log('{$message}')</script>";
+}
