@@ -91,4 +91,35 @@
     .site-header .main-navigation .sub-menu>.menu-item a {
         margin-left: 2rem;
     }
+
+    .site-header .main-navigation #mobile-menu #primary-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        margin-left: 2rem;
+    }
+
+    .site-header .main-navigation #mobile-menu #primary-menu .sub-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        position: relative;
+        opacity: 100;
+        background: transparent;
+        border: none;
+    }
+
+    .site-header .main-navigation #mobile-menu #primary-menu .menu-item-has-children {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+
+    .site-header .main-navigation #mobile-menu #primary-menu .menu-item-has-children .sub-menu li {
+        background: transparent;
+        border: none;
+    }
 }

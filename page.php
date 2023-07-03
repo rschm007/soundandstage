@@ -40,6 +40,9 @@ get_header();
 				$postNum = intval($postId);
 
 				$keywords = get_field("keywords", $postNum);
+				$client = get_field("client_name", $postNum);
+				$director = get_field("director_attribution", $postNum);
+
 				$globalKeys = null;
 
 				if ($keywords != null) {
@@ -49,7 +52,7 @@ get_header();
 
 				<?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail'); ?>
 
-				<a id="<?php the_title(); ?>" href="<?php the_permalink(); ?>" class="post-block relative flex flex-col items-center justify-center md:col-span-1 h-96 w-96 z-10 group" aria-label="<?php if ($globalKeys != null) : echo implode(" ", $globalKeys) ?><?php endif ?>">
+				<a id="<?php the_title(); ?> <?php echo $client; ?> <?php echo $director; ?>" href="<?php the_permalink(); ?>" class="post-block relative flex flex-col items-center justify-center md:col-span-1 h-96 w-96 z-10 group" aria-label="<?php if ($globalKeys != null) : echo implode(" ", $globalKeys); ?><?php endif ?>">
 					<img class=" object-cover bg-cover bg-center w-full h-full group-hover:opacity-40 opacity-100 transition-all duration-150" src="<?php echo $image[0]; ?>" alt="<?php the_title(); ?>" />
 
 					<h4 class="text-2xl font-light -md:-mt-12 bg-slate-900/90 w-full px-8 py-4 z-50 text-center">

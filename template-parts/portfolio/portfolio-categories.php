@@ -9,7 +9,7 @@
  */
 ?>
 
-<h3 class="text-4xl text-center w-full h-full capitalize font-bold mt-8"><?php single_post_title() ?></h3>
+<h3 class="text-4xl text-center w-full h-full capitalize font-bold mt-8 mb-12"><?php single_post_title() ?></h3>
 
 <div class="w-full flex flex-col items-center justify-center space-y-8 md:space-y-0 md:grid md:grid-cols-3 md:gap-x-5 px-12 md:-mt-12">
     <?php if (have_rows('portfolio_category_one')) : ?>

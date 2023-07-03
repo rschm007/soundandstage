@@ -31,7 +31,7 @@
 
 <body <?php body_class(); ?>>
 	<?php wp_body_open(); ?>
-	<div id="page" class="site">
+	<div id="page" class="site mb-24">
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'soundandstage'); ?></a>
 
 		<header id="masthead" class="relative site-header flex flex-row items-center justify-between w-full space-x-5 h-16 px-16">

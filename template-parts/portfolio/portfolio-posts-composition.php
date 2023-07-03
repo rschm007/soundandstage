@@ -4,9 +4,9 @@ $fields = acf_get_fields($composition_group_key); // Update fields in this post
 if ($fields) :
     $_fields = get_fields();
 
-    $client = $_fields['composition_client_name'];
-    $director = $_fields['composition_director_attribution'];
-    $content = $_fields['composition_text_content'];
+    $client = $_fields['client_name'];
+    $director = $_fields['director_attribution'];
+    $content = $_fields['text_content'];
 
 ?>
     <div id="portfolio-posts-composition" class="flex flex-col items-center justify-center py-12">
@@ -70,11 +70,20 @@ if ($fields) :
                             $new_src = add_query_arg($params, $src);
                             $iframe = str_replace($src, $new_src, $iframe);
 
+                            $youtube = strpos($src, "youtube");
+                            $vimeo = strpos($src, "vimeo");
+
+                            $height = " md:h-24";
+                            if ($youtube || $vimeo) {
+                                $height = "md:h-[40rem]";
+                            };
+
                             // Add extra attributes to iframe HTML.
-                            $attributes = 'class="w-full h-48 md:h-24" frameborder="0"';
+                            $attributes = 'class="w-full h-48' . ' ' . $height . '" frameborder="0"';
                             $iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
                         ?>
-                            <figure class="mt-16 mb-4 space-y-1 w-full">
+                            <figure class="my-8 md:my-4 space-y-4 md:space-y-1 w-full md:min-w-[40vw]">
                                 <?php if ($caption_one) : ?>
                                     <p class="text-white text-left w-full font-bold">
                                         <?php echo $caption_one ?>
@@ -102,11 +111,20 @@ if ($fields) :
                             $new_src = add_query_arg($params, $src);
                             $iframe = str_replace($src, $new_src, $iframe);
 
+                            $youtube = strpos($src, "youtube");
+                            $vimeo = strpos($src, "vimeo");
+
+                            $height = " md:h-24";
+                            if ($youtube || $vimeo) {
+                                $height = "md:h-[40rem]";
+                            };
+
                             // Add extra attributes to iframe HTML.
-                            $attributes = 'class="w-full h-48 md:h-24" frameborder="0"';
+                            $attributes = 'class="w-full h-48' . ' ' . $height . '" frameborder="0"';
                             $iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
                         ?>
-                            <figure class="my-8 md:my-4 space-y-4 md:space-y-1 w-full">
+                            <figure class="my-8 md:my-4 space-y-4 md:space-y-1 w-full md:min-w-[40w]">
                                 <?php if ($caption_two) : ?>
                                     <p class="text-white text-left w-full font-bold">
                                         <?php echo $caption_two ?>
@@ -134,11 +152,20 @@ if ($fields) :
                             $new_src = add_query_arg($params, $src);
                             $iframe = str_replace($src, $new_src, $iframe);
 
+                            $youtube = strpos($src, "youtube");
+                            $vimeo = strpos($src, "vimeo");
+
+                            $height = " md:h-24";
+                            if ($youtube || $vimeo) {
+                                $height = "md:h-[40rem]";
+                            };
+
                             // Add extra attributes to iframe HTML.
-                            $attributes = 'class="w-full h-48 md:h-24" frameborder="0"';
+                            $attributes = 'class="w-full h-48' . ' ' . $height . '" frameborder="0"';
                             $iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
                         ?>
-                            <figure class="my-8 md:my-4 space-y-4 md:space-y-1 w-full">
+                            <figure class="my-8 md:my-4 space-y-4 md:space-y-1 w-full md:min-w-[40w]">
                                 <?php if ($caption_three) : ?>
                                     <p class="text-white text-left w-full font-bold">
                                         <?php echo $caption_three ?>
@@ -166,11 +193,20 @@ if ($fields) :
                             $new_src = add_query_arg($params, $src);
                             $iframe = str_replace($src, $new_src, $iframe);
 
+                            $youtube = strpos($src, "youtube");
+                            $vimeo = strpos($src, "vimeo");
+
+                            $height = " md:h-24";
+                            if ($youtube || $vimeo) {
+                                $height = "md:h-[40rem]";
+                            };
+
                             // Add extra attributes to iframe HTML.
-                            $attributes = 'class="w-full h-48 md:h-24" frameborder="0"';
+                            $attributes = 'class="w-full h-48' . ' ' . $height . '" frameborder="0"';
                             $iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
                         ?>
-                            <figure class="my-8 md:my-4 space-y-4 md:space-y-1 w-full">
+                            <figure class="my-8 md:my-4 space-y-4 md:space-y-1 w-full md:min-w-[40w]">
                                 <?php if ($caption_four) : ?>
                                     <p class="text-white text-left w-full font-bold">
                                         <?php echo $caption_four ?>
@@ -198,11 +234,20 @@ if ($fields) :
                             $new_src = add_query_arg($params, $src);
                             $iframe = str_replace($src, $new_src, $iframe);
 
+                            $youtube = strpos($src, "youtube");
+                            $vimeo = strpos($src, "vimeo");
+
+                            $height = "h-48 md:h-24";
+                            if ($youtube || $vimeo) {
+                                $height = "h-72 md:h-[40rem]";
+                            };
+
                             // Add extra attributes to iframe HTML.
-                            $attributes = 'class="w-full h-48 md:h-24" frameborder="0"';
+                            $attributes = 'class="w-full' . ' ' . $height . '" frameborder="0"';
                             $iframe = str_replace('></iframe>', ' ' . $attributes . '></iframe>', $iframe);
+
                         ?>
-                            <figure class="my-8 md:my-4 space-y-4 md:space-y-1 w-full">
+                            <figure class="my-8 md:my-4 space-y-4 md:space-y-1 w-full md:min-w-[40w]">
                                 <?php if ($caption_five) : ?>
                                     <p class="text-white text-left w-full font-bold">
                                         <?php echo $caption_five ?>

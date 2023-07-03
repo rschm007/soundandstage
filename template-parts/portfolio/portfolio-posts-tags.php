@@ -44,7 +44,7 @@ $the_query = new WP_Query($args);
     });
 </script>
 
-<div class="flex flex-row items-center justify-center w-full h-8 space-x-8">
+<div class="flex flex-row items-center flex-wrap justify-center w-full h-8 min-h-fit space-x-2 md:space-x-8">
 
     <label class="text-white">
         Filter by Tag:

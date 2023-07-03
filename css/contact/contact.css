@@ -1,0 +1,54 @@
+.wpcf7,
+.wpcf7 input.wpcf7-text,
+.wpcf7 textarea.wpcf7-textarea {
+    max-width: 60vw;
+}
+
+.wpcf7>p:nth-child(3),
+.wpcf7>p:nth-child(4) {
+    margin-bottom: 1rem;
+}
+
+.wpcf7 label[for="message"] {
+    margin-bottom: -1rem !important;
+}
+
+.wpcf7 input.wpcf7-text,
+.wpcf7 textarea.wpcf7-textarea {
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+}
+
+.wpcf7 input.wpcf7-submit {
+    border: solid 2px white;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 0.75rem;
+    transition: all 150ms ease-in-out;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+.wpcf7 input.wpcf7-submit:hover {
+    color: black;
+    background: #94a3b8;
+}
+
+.wpcf7-not-valid {
+    border: 2px solid #ef4444;
+    background-color: #fef2f2;
+}
+
+.wpcf7-response-output,
+.wpcf7-not-valid-tip {
+    color: #ef4444 !important;
+    font-size: 1em;
+    font-weight: 600 !important;
+    display: block;
+    margin: 0.5rem 0 !important;
+}
