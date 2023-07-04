@@ -35,8 +35,15 @@
                         <?php if (!empty($sub_header)) : ?>
                             <h2 class="relative z-10 text-white text-2xl text-center uppercase font-light">
                                 <?php echo $sub_header ?>
-                                </h1>
+                            </h2>
+
+                            <?php if (!empty($tagline)) : ?>
+                                <p class="relative z-10 text-white text-xl text-center uppercase font-light">
+                                    <?php echo $tagline ?>
+                                </p>
                             <?php endif ?>
+
+                        <?php endif ?>
                     </div>
                 </div>
 
