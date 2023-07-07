@@ -23,11 +23,9 @@ if ($hero) : get_template_part('template-parts/hero-header/hero-header')
 
     <div class="flex flex-col md:flex-row items-start justify-center px-12 md:px-36 w-full md:space-x-24">
 
-        <div class="w-full md:w-9/12 h-full" id="content" role="main">
-            <form class="flex flex-col items-start justify-center w-full h-full mt-6 space-y-4 border rounded px-6 py-4 border-white bg-slate-900" method="post" id="contactus_form">
-                <?php echo do_shortcode('[contact-form-7 id="291" title="Untitled"]') ?>
-            </form>
-        </div><!-- #content -->
+        <?php
+        get_template_part('template-parts/content-contact-form')
+        ?>
 
         <div class="flex flex-col items-start justify-center py-12 space-y-2 w-full">
             <p class="text-white text-2xl font-semibold mb-1">

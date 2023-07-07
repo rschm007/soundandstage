@@ -27,3 +27,13 @@ span,
 p {
     font-family: 'Montserrat', sans-serif;
 }
+
+@media screen and (max-width: 768px) {
+	.site {
+		margin-bottom: 16rem!important;
+	}
+	
+	#hero h1 {
+		font-size: 2rem!important;
+	}
+}

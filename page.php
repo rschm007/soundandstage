@@ -49,7 +49,7 @@ get_header();
 					$globalKeys = array_column($keywords, "name");
 				};
 			?>
-
+			
 				<?php $image = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'single-post-thumbnail'); ?>
 
 				<a id="<?php the_title(); ?> <?php echo $client; ?> <?php echo $director; ?>" href="<?php the_permalink(); ?>" class="post-block relative flex flex-col items-center justify-center md:col-span-1 h-96 w-96 z-10 group" aria-label="<?php if ($globalKeys != null) : echo implode(" ", $globalKeys); ?><?php endif ?>">
